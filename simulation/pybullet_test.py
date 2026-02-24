@@ -80,16 +80,20 @@ def leg_ik(x, y, z, L1=0.2, L2=0.2):
 # -------------------------
 # 6️⃣ Simulation loop
 # -------------------------
-phases = [0, math.pi, math.pi, 0]
+phases = [0, math.pi, 0, math.pi]
+stride_length = 0.1
+lift_height = 0.05
+foot_x_base = 0.15
+foot_z_base = -0.25
 
 while True:
     t = time.time()
 
     for i, leg_id in enumerate(legs):
         phase = phases[i]
-        foot_x = 0.15 + 0.05 * math.sin(t + phase)
+        foot_x = foot_x_base + stride_length * math.sin(t + phase)
         foot_y = 0.0
-        foot_z = -0.25 + 0.05 * math.cos(t + phase)
+        foot_z = foot_z_base + lift_height * math.cos(t + phase)
 
         abduction, hip_angle, knee_angle = leg_ik(foot_x, foot_y, foot_z)
 
