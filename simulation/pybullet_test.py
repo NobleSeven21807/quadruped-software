@@ -26,10 +26,10 @@ script_dir = os.path.dirname(os.path.realpath(__file__))
 urdf_path = os.path.join(script_dir, "urdf", "three_joint_leg.urdf")
 
 leg_positions = [
-    (0.2, -0.1, 0.5),  # front right
-    (0.2,  0.1, 0.5),  # front left
-    (-0.2,-0.1, 0.5),  # rear right
-    (-0.2, 0.1, 0.5),  # rear left
+    (0.1, -0.2, 0.5),  # front right
+    (0.1,  0.2, 0.5),  # front left
+    (-0.1,-0.2, 0.5),  # rear right
+    (-0.1, 0.2, 0.5),  # rear left
 ]
 
 legs = []
@@ -59,34 +59,39 @@ def leg_ik(x, y, z, L1=0.2, L2=0.2):
     
     # Project into X'-Z plane for planar 2-joint IK
     x_prime = math.sqrt(x**2 + y**2)
-    r = math.sqrt(x_prime**2 + z**2)
+    z_prime = z
     
-    # Knee angle via law of cosines
+    r = math.sqrt(x_prime**2 + z_prime**2)
+
+    r = min(r, L1 + L2 - 1e-6)
+    r = max(r, abs(L1 - L2) + 1e-6)
+
     cos_knee = (L1**2 + L2**2 - r**2) / (2 * L1 * L2)
-    theta_knee = math.acos(max(min(cos_knee, 1), -1))
+    knee_angle = math.acos(max(min(cos_knee, 1), -1))
     
     # Hip angle
-    gamma = math.atan2(x_prime, z)
-    cos_hip = (r**2 + L1**2 - L2**2) / (2 * L1 * r)
-    alpha = math.acos(max(min(cos_hip, 1), -1))
-    theta_hip = gamma - alpha
+    gamma = math.atan2(-z_prime, x_prime)
+    cos_alpha = (r**2 + L1**2 - L2**2) / (2 * L1 * r)
+    alpha = math.acos(max(min(cos_alpha, 1), -1))
+    hip_angle = gamma - alpha
     
-    return abduction, theta_hip, theta_knee
+    return abduction, hip_angle, knee_angle
 
 # -------------------------
 # 6️⃣ Simulation loop
 # -------------------------
+phases = [0, math.pi, math.pi, 0]
+
 while True:
     t = time.time()
 
     for i, leg_id in enumerate(legs):
-        phase = i % 2 * math.pi
-        foot_x = 0.2 + 0.05 * math.sin(t + phase)
-        foot_y = leg_positions[i][1]
-        foot_z = -0.2 + 0.05 * math.sin(t + phase)
+        phase = phases[i]
+        foot_x = 0.15 + 0.05 * math.sin(t + phase)
+        foot_y = 0.0
+        foot_z = -0.25 + 0.05 * math.cos(t + phase)
 
-        hip_angle = 0.5 * math.sin(t + phase)
-        knee_angle = 0.3 * math.cos(t + phase)
+        abduction, hip_angle, knee_angle = leg_ik(foot_x, foot_y, foot_z)
 
         p.setJointMotorControl2(leg_id, abduction_index, p.POSITION_CONTROL, targetPosition=abduction_index)
         p.setJointMotorControl2(leg_id, hip_index, p.POSITION_CONTROL, targetPosition=hip_angle)
@@ -94,4 +99,7 @@ while True:
 
     # Step the simulation
     p.stepSimulation()
+    print(f"Abduction: {abduction:.2f}, Hip: {hip_angle:.2f}, Knee: {knee_angle:.2f}")
+    foot_pos = p.getLinkState(leg_id, knee_index)[0]  # position of foot link
+    print("Foot position:", foot_pos)
     time.sleep(1/240)  # 240 Hz simulation
