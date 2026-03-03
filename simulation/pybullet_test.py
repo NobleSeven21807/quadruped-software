@@ -43,7 +43,7 @@ leg_offsets = [
 
 legs = []
 for offset in leg_offsets:
-    leg_id = p.loadURDF(urdf_path, basePosition=offset, useFixedBase=False)
+    leg_id = p.loadURDF(urdf_path, basePosition=[0,0,0], useFixedBase=False)
     p.createConstraint(parentBodyUniqueId=body,
                        parentLinkIndex=-1,
                        childBodyUniqueId=leg_id,
@@ -110,9 +110,10 @@ while True:
         phase = phases[i]
         foot_x = foot_x_base + stride_length * math.sin(t + phase)
         foot_y = 0.0
-        foot_z = foot_z_base + lift_height * math.cos(t + phase)
+        foot_z = foot_z_base + lift_height * max(0, math.sin(t + phase))
 
-        abduction, hip_angle, knee_angle = leg_ik(foot_x, foot_y, foot_z)
+        foot_target = [foot_x - leg_offsets[i][0], foot_y - leg_offsets[i][1], foot_z - leg_offsets[i][2]]
+        abduction, hip_angle, knee_angle = leg_ik(*foot_target)
 
         p.setJointMotorControl2(leg_id, abduction_index, p.POSITION_CONTROL, targetPosition=abduction)
         p.setJointMotorControl2(leg_id, hip_index, p.POSITION_CONTROL, targetPosition=hip_angle)
@@ -121,6 +122,6 @@ while True:
     # Step the simulation
     p.stepSimulation()
     print(f"Abduction: {abduction:.2f}, Hip: {hip_angle:.2f}, Knee: {knee_angle:.2f}")
-    foot_pos = p.getLinkState(leg_id, knee_index)[0]  # position of foot link
+    foot_pos = p.getLinkState(leg_id, foot_link_index)[0]  # position of foot link
     print("Foot position:", foot_pos)
     time.sleep(1/240)  # 240 Hz simulation
