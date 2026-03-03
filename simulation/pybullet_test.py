@@ -25,16 +25,33 @@ planeId = p.loadURDF("plane.urdf")
 script_dir = os.path.dirname(os.path.realpath(__file__))
 urdf_path = os.path.join(script_dir, "urdf", "three_joint_leg.urdf")
 
-leg_positions = [
-    (0.1, -0.2, 0.5),  # front right
-    (0.1,  0.2, 0.5),  # front left
-    (-0.1,-0.2, 0.5),  # rear right
-    (-0.1, 0.2, 0.5),  # rear left
+# Load a simple body (base) at the center
+body_collision = p.createCollisionShape(p.GEOM_BOX, halfExtents=[0.2, 0.1, 0.05])
+body_visual = p.createVisualShape(p.GEOM_BOX, halfExtents=[0.2, 0.1, 0.05], rgbaColor=[0.5,0.5,0.5,1])
+
+body = p.createMultiBody(baseMass=1.0,
+                         baseCollisionShapeIndex=body_collision,
+                         baseVisualShapeIndex=body_visual,
+                         basePosition=[0,0,0.3])
+
+leg_offsets = [
+    (0.15, -0.1, 0),  # front right
+    (0.15,  0.1, 0),  # front left
+    (-0.15,-0.1, 0),  # rear right
+    (-0.15, 0.1, 0),  # rear left
 ]
 
 legs = []
-for pos in leg_positions:
-    leg_id = p.loadURDF(urdf_path, basePosition=pos, useFixedBase=True)
+for offset in leg_offsets:
+    leg_id = p.loadURDF(urdf_path, basePosition=offset, useFixedBase=False)
+    p.createConstraint(parentBodyUniqueId=body,
+                       parentLinkIndex=-1,
+                       childBodyUniqueId=leg_id,
+                       childLinkIndex=-1,
+                       jointType=p.JOINT_FIXED,
+                       jointAxis=[0,0,0],
+                       parentFramePosition=offset,
+                       childFramePosition=[0,0,0])
     legs.append(leg_id)
 
 
@@ -97,7 +114,7 @@ while True:
 
         abduction, hip_angle, knee_angle = leg_ik(foot_x, foot_y, foot_z)
 
-        p.setJointMotorControl2(leg_id, abduction_index, p.POSITION_CONTROL, targetPosition=abduction_index)
+        p.setJointMotorControl2(leg_id, abduction_index, p.POSITION_CONTROL, targetPosition=abduction)
         p.setJointMotorControl2(leg_id, hip_index, p.POSITION_CONTROL, targetPosition=hip_angle)
         p.setJointMotorControl2(leg_id, knee_index, p.POSITION_CONTROL, targetPosition=knee_angle)
 
