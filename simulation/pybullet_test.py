@@ -29,7 +29,7 @@ urdf_path = os.path.join(script_dir, "urdf", "three_joint_leg.urdf")
 body_collision = p.createCollisionShape(p.GEOM_BOX, halfExtents=[0.2, 0.1, 0.05])
 body_visual = p.createVisualShape(p.GEOM_BOX, halfExtents=[0.2, 0.1, 0.05], rgbaColor=[0.5,0.5,0.5,1])
 
-body = p.createMultiBody(baseMass=1.0,
+body = p.createMultiBody(baseMass=5.0,
                          baseCollisionShapeIndex=body_collision,
                          baseVisualShapeIndex=body_visual,
                          basePosition=[0,0,0.3])
@@ -37,14 +37,16 @@ body = p.createMultiBody(baseMass=1.0,
 leg_offsets = [
     (0.15, -0.1, 0),  # front right
     (0.15,  0.1, 0),  # front left
-    (-0.15,-0.1, 0),  # rear right
+    (-0.15, -0.1, 0),  # rear right
     (-0.15, 0.1, 0),  # rear left
 ]
 
 legs = []
+constraints = []
+
 for offset in leg_offsets:
     leg_id = p.loadURDF(urdf_path, basePosition=[0,0,0], useFixedBase=False)
-    p.createConstraint(parentBodyUniqueId=body,
+    c = p.createConstraint(parentBodyUniqueId=body,
                        parentLinkIndex=-1,
                        childBodyUniqueId=leg_id,
                        childLinkIndex=-1,
@@ -52,6 +54,7 @@ for offset in leg_offsets:
                        jointAxis=[0,0,0],
                        parentFramePosition=offset,
                        childFramePosition=[0,0,0])
+    constraints.append(c)
     legs.append(leg_id)
 
 
@@ -65,6 +68,11 @@ knee_index = 2
 
 # Link index of the foot (lower leg)
 foot_link_index = 2
+
+for leg_id in legs:
+    p.setJointMotorControl2(leg_id, abduction_index, p.POSITION_CONTROL, targetPosition=0, force=50)
+    p.setJointMotorControl2(leg_id, hip_index, p.POSITION_CONTROL, targetPosition=0, force=50)
+    p.setJointMotorControl2(leg_id, knee_index, p.POSITION_CONTROL, targetPosition=0, force=50)
 
 def leg_ik(x, y, z, L1=0.2, L2=0.2):
     """
@@ -115,9 +123,9 @@ while True:
         foot_target = [foot_x - leg_offsets[i][0], foot_y - leg_offsets[i][1], foot_z - leg_offsets[i][2]]
         abduction, hip_angle, knee_angle = leg_ik(*foot_target)
 
-        p.setJointMotorControl2(leg_id, abduction_index, p.POSITION_CONTROL, targetPosition=abduction)
-        p.setJointMotorControl2(leg_id, hip_index, p.POSITION_CONTROL, targetPosition=hip_angle)
-        p.setJointMotorControl2(leg_id, knee_index, p.POSITION_CONTROL, targetPosition=knee_angle)
+        p.setJointMotorControl2(leg_id, abduction_index, p.POSITION_CONTROL, targetPosition=abduction, force=50)
+        p.setJointMotorControl2(leg_id, hip_index, p.POSITION_CONTROL, targetPosition=hip_angle, force=50)
+        p.setJointMotorControl2(leg_id, knee_index, p.POSITION_CONTROL, targetPosition=knee_angle, force=50)
 
     # Step the simulation
     p.stepSimulation()
