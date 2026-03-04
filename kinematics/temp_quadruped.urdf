@@ -1,137 +1,96 @@
 <?xml version="1.0"?>
 <robot name="quadruped">
   <link name="base_link">
-    <visual>
-      <geometry><box size="0.4 0.2 0.05"/></geometry>
-      <material name="gray"><color rgba="0.3 0.3 0.3 1"/></material>
-    </visual>
+    <visual><geometry><box size="0.4 0.2 0.05"/></geometry><material name="gray"><color rgba="0.3 0.3 0.3 1"/></material></visual>
+    <collision><geometry><box size="0.4 0.2 0.05"/></geometry></collision>
+    <inertial><mass value="2.0"/><inertia ixx="0.01" ixy="0" ixz="0" iyy="0.01" iyz="0" izz="0.01"/></inertial>
   </link>
 
   <link name="FL_coxa">
-    <visual><geometry><cylinder length="0.05" radius="0.02"/></geometry>
-    <origin rpy="1.5708 0 0" xyz="0 0.025 0"/><material name="red"><color rgba="0.8 0 0 1"/></material></visual>
+    <visual><geometry><cylinder length="0.05" radius="0.02"/></geometry><origin rpy="1.5708 0 0" xyz="0 0.025 0"/><material name="red"><color rgba="0.8 0 0 1"/></material></visual>
+    <collision><geometry><cylinder length="0.05" radius="0.02"/></geometry><origin rpy="1.5708 0 0" xyz="0 0.025 0"/></collision>
+    <inertial><mass value="0.2"/><inertia ixx="0.0001" ixy="0" ixz="0" iyy="0.0001" iyz="0" izz="0.0001"/></inertial>
   </link>
   <link name="FL_femur">
-    <visual><geometry><cylinder length="0.2" radius="0.02"/></geometry>
-    <origin rpy="0 0 0" xyz="0 0 -0.1"/></visual>
+    <visual><geometry><cylinder length="0.2" radius="0.02"/></geometry><origin rpy="0 0 0" xyz="0 0 -0.1"/></visual>
+    <collision><geometry><cylinder length="0.2" radius="0.02"/></geometry><origin rpy="0 0 0" xyz="0 0 -0.1"/></collision>
+    <inertial><mass value="0.2"/><inertia ixx="0.0001" ixy="0" ixz="0" iyy="0.0001" iyz="0" izz="0.0001"/></inertial>
   </link>
   <link name="FL_tibia">
-    <visual><geometry><cylinder length="0.2" radius="0.015"/></geometry>
-    <origin rpy="0 0 0" xyz="0 0 -0.1"/><material name="blue"><color rgba="0 0 0.8 1"/></material></visual>
+    <visual><geometry><sphere radius="0.02"/></geometry><origin rpy="0 0 0" xyz="0 0 -0.2"/><material name="blue"><color rgba="0 0 0.8 1"/></material></visual>
+    <visual><geometry><cylinder length="0.2" radius="0.015"/></geometry><origin rpy="0 0 0" xyz="0 0 -0.1"/><material name="blue"><color rgba="0 0 0.8 1"/></material></visual>
+    <collision><geometry><sphere radius="0.02"/></geometry><origin rpy="0 0 0" xyz="0 0 -0.2"/></collision>
+    <collision><geometry><cylinder length="0.2" radius="0.015"/></geometry><origin rpy="0 0 0" xyz="0 0 -0.1"/></collision>
+    <inertial><mass value="0.2"/><inertia ixx="0.0001" ixy="0" ixz="0" iyy="0.0001" iyz="0" izz="0.0001"/></inertial>
   </link>
 
-  <joint name="FL_shoulder_roll" type="revolute">
-    <parent link="base_link"/><child link="FL_coxa"/>
-    <origin xyz="0.2 0.1 0" rpy="0 0 0"/>
-    <axis xyz="1 0 0"/>
-    <limit effort="20" velocity="10" lower="-1.5" upper="1.5"/>
-  </joint>
-  <joint name="FL_shoulder_pitch" type="revolute">
-    <parent link="FL_coxa"/><child link="FL_femur"/>
-    <origin xyz="0 0.05 0" rpy="0 0 0"/>
-    <axis xyz="0 1 0"/>
-    <limit effort="20" velocity="10" lower="-1.5" upper="1.5"/>
-  </joint>
-  <joint name="FL_knee_pitch" type="revolute">
-    <parent link="FL_femur"/><child link="FL_tibia"/>
-    <origin xyz="0 0 -0.2" rpy="0 0 0"/>
-    <axis xyz="0 1 0"/>
-    <limit effort="20" velocity="10" lower="-3.0" upper="3.0"/>
-  </joint>
+  <joint name="FL_shoulder_roll" type="revolute"><parent link="base_link"/><child link="FL_coxa"/><origin xyz="0.2 0.1 0" rpy="0 0 0"/><axis xyz="1 0 0"/><limit effort="30" velocity="10" lower="-1.5" upper="1.5"/></joint>
+  <joint name="FL_shoulder_pitch" type="revolute"><parent link="FL_coxa"/><child link="FL_femur"/><origin xyz="0 0.05 0" rpy="0 0 0"/><axis xyz="0 1 0"/><limit effort="30" velocity="10" lower="-1.5" upper="1.5"/></joint>
+  <joint name="FL_knee_pitch" type="revolute"><parent link="FL_femur"/><child link="FL_tibia"/><origin xyz="0 0 -0.2" rpy="0 0 0"/><axis xyz="0 1 0"/><limit effort="30" velocity="10" lower="-3.0" upper="3.0"/></joint>
 
   <link name="FR_coxa">
-    <visual><geometry><cylinder length="0.05" radius="0.02"/></geometry>
-    <origin rpy="1.5708 0 0" xyz="0 -0.025 0"/><material name="red"><color rgba="0.8 0 0 1"/></material></visual>
+    <visual><geometry><cylinder length="0.05" radius="0.02"/></geometry><origin rpy="1.5708 0 0" xyz="0 -0.025 0"/><material name="red"><color rgba="0.8 0 0 1"/></material></visual>
+    <collision><geometry><cylinder length="0.05" radius="0.02"/></geometry><origin rpy="1.5708 0 0" xyz="0 -0.025 0"/></collision>
+    <inertial><mass value="0.2"/><inertia ixx="0.0001" ixy="0" ixz="0" iyy="0.0001" iyz="0" izz="0.0001"/></inertial>
   </link>
   <link name="FR_femur">
-    <visual><geometry><cylinder length="0.2" radius="0.02"/></geometry>
-    <origin rpy="0 0 0" xyz="0 0 -0.1"/></visual>
+    <visual><geometry><cylinder length="0.2" radius="0.02"/></geometry><origin rpy="0 0 0" xyz="0 0 -0.1"/></visual>
+    <collision><geometry><cylinder length="0.2" radius="0.02"/></geometry><origin rpy="0 0 0" xyz="0 0 -0.1"/></collision>
+    <inertial><mass value="0.2"/><inertia ixx="0.0001" ixy="0" ixz="0" iyy="0.0001" iyz="0" izz="0.0001"/></inertial>
   </link>
   <link name="FR_tibia">
-    <visual><geometry><cylinder length="0.2" radius="0.015"/></geometry>
-    <origin rpy="0 0 0" xyz="0 0 -0.1"/><material name="blue"><color rgba="0 0 0.8 1"/></material></visual>
+    <visual><geometry><sphere radius="0.02"/></geometry><origin rpy="0 0 0" xyz="0 0 -0.2"/><material name="blue"><color rgba="0 0 0.8 1"/></material></visual>
+    <visual><geometry><cylinder length="0.2" radius="0.015"/></geometry><origin rpy="0 0 0" xyz="0 0 -0.1"/><material name="blue"><color rgba="0 0 0.8 1"/></material></visual>
+    <collision><geometry><sphere radius="0.02"/></geometry><origin rpy="0 0 0" xyz="0 0 -0.2"/></collision>
+    <collision><geometry><cylinder length="0.2" radius="0.015"/></geometry><origin rpy="0 0 0" xyz="0 0 -0.1"/></collision>
+    <inertial><mass value="0.2"/><inertia ixx="0.0001" ixy="0" ixz="0" iyy="0.0001" iyz="0" izz="0.0001"/></inertial>
   </link>
 
-  <joint name="FR_shoulder_roll" type="revolute">
-    <parent link="base_link"/><child link="FR_coxa"/>
-    <origin xyz="0.2 -0.1 0" rpy="0 0 0"/>
-    <axis xyz="1 0 0"/>
-    <limit effort="20" velocity="10" lower="-1.5" upper="1.5"/>
-  </joint>
-  <joint name="FR_shoulder_pitch" type="revolute">
-    <parent link="FR_coxa"/><child link="FR_femur"/>
-    <origin xyz="0 -0.05 0" rpy="0 0 0"/>
-    <axis xyz="0 1 0"/>
-    <limit effort="20" velocity="10" lower="-1.5" upper="1.5"/>
-  </joint>
-  <joint name="FR_knee_pitch" type="revolute">
-    <parent link="FR_femur"/><child link="FR_tibia"/>
-    <origin xyz="0 0 -0.2" rpy="0 0 0"/>
-    <axis xyz="0 1 0"/>
-    <limit effort="20" velocity="10" lower="-3.0" upper="3.0"/>
-  </joint>
+  <joint name="FR_shoulder_roll" type="revolute"><parent link="base_link"/><child link="FR_coxa"/><origin xyz="0.2 -0.1 0" rpy="0 0 0"/><axis xyz="1 0 0"/><limit effort="30" velocity="10" lower="-1.5" upper="1.5"/></joint>
+  <joint name="FR_shoulder_pitch" type="revolute"><parent link="FR_coxa"/><child link="FR_femur"/><origin xyz="0 -0.05 0" rpy="0 0 0"/><axis xyz="0 1 0"/><limit effort="30" velocity="10" lower="-1.5" upper="1.5"/></joint>
+  <joint name="FR_knee_pitch" type="revolute"><parent link="FR_femur"/><child link="FR_tibia"/><origin xyz="0 0 -0.2" rpy="0 0 0"/><axis xyz="0 1 0"/><limit effort="30" velocity="10" lower="-3.0" upper="3.0"/></joint>
 
   <link name="BL_coxa">
-    <visual><geometry><cylinder length="0.05" radius="0.02"/></geometry>
-    <origin rpy="1.5708 0 0" xyz="0 0.025 0"/><material name="red"><color rgba="0.8 0 0 1"/></material></visual>
+    <visual><geometry><cylinder length="0.05" radius="0.02"/></geometry><origin rpy="1.5708 0 0" xyz="0 0.025 0"/><material name="red"><color rgba="0.8 0 0 1"/></material></visual>
+    <collision><geometry><cylinder length="0.05" radius="0.02"/></geometry><origin rpy="1.5708 0 0" xyz="0 0.025 0"/></collision>
+    <inertial><mass value="0.2"/><inertia ixx="0.0001" ixy="0" ixz="0" iyy="0.0001" iyz="0" izz="0.0001"/></inertial>
   </link>
   <link name="BL_femur">
-    <visual><geometry><cylinder length="0.2" radius="0.02"/></geometry>
-    <origin rpy="0 0 0" xyz="0 0 -0.1"/></visual>
+    <visual><geometry><cylinder length="0.2" radius="0.02"/></geometry><origin rpy="0 0 0" xyz="0 0 -0.1"/></visual>
+    <collision><geometry><cylinder length="0.2" radius="0.02"/></geometry><origin rpy="0 0 0" xyz="0 0 -0.1"/></collision>
+    <inertial><mass value="0.2"/><inertia ixx="0.0001" ixy="0" ixz="0" iyy="0.0001" iyz="0" izz="0.0001"/></inertial>
   </link>
   <link name="BL_tibia">
-    <visual><geometry><cylinder length="0.2" radius="0.015"/></geometry>
-    <origin rpy="0 0 0" xyz="0 0 -0.1"/><material name="blue"><color rgba="0 0 0.8 1"/></material></visual>
+    <visual><geometry><sphere radius="0.02"/></geometry><origin rpy="0 0 0" xyz="0 0 -0.2"/><material name="blue"><color rgba="0 0 0.8 1"/></material></visual>
+    <visual><geometry><cylinder length="0.2" radius="0.015"/></geometry><origin rpy="0 0 0" xyz="0 0 -0.1"/><material name="blue"><color rgba="0 0 0.8 1"/></material></visual>
+    <collision><geometry><sphere radius="0.02"/></geometry><origin rpy="0 0 0" xyz="0 0 -0.2"/></collision>
+    <collision><geometry><cylinder length="0.2" radius="0.015"/></geometry><origin rpy="0 0 0" xyz="0 0 -0.1"/></collision>
+    <inertial><mass value="0.2"/><inertia ixx="0.0001" ixy="0" ixz="0" iyy="0.0001" iyz="0" izz="0.0001"/></inertial>
   </link>
 
-  <joint name="BL_shoulder_roll" type="revolute">
-    <parent link="base_link"/><child link="BL_coxa"/>
-    <origin xyz="-0.2 0.1 0" rpy="0 0 0"/>
-    <axis xyz="1 0 0"/>
-    <limit effort="20" velocity="10" lower="-1.5" upper="1.5"/>
-  </joint>
-  <joint name="BL_shoulder_pitch" type="revolute">
-    <parent link="BL_coxa"/><child link="BL_femur"/>
-    <origin xyz="0 0.05 0" rpy="0 0 0"/>
-    <axis xyz="0 1 0"/>
-    <limit effort="20" velocity="10" lower="-1.5" upper="1.5"/>
-  </joint>
-  <joint name="BL_knee_pitch" type="revolute">
-    <parent link="BL_femur"/><child link="BL_tibia"/>
-    <origin xyz="0 0 -0.2" rpy="0 0 0"/>
-    <axis xyz="0 1 0"/>
-    <limit effort="20" velocity="10" lower="-3.0" upper="3.0"/>
-  </joint>
+  <joint name="BL_shoulder_roll" type="revolute"><parent link="base_link"/><child link="BL_coxa"/><origin xyz="-0.2 0.1 0" rpy="0 0 0"/><axis xyz="1 0 0"/><limit effort="30" velocity="10" lower="-1.5" upper="1.5"/></joint>
+  <joint name="BL_shoulder_pitch" type="revolute"><parent link="BL_coxa"/><child link="BL_femur"/><origin xyz="0 0.05 0" rpy="0 0 0"/><axis xyz="0 1 0"/><limit effort="30" velocity="10" lower="-1.5" upper="1.5"/></joint>
+  <joint name="BL_knee_pitch" type="revolute"><parent link="BL_femur"/><child link="BL_tibia"/><origin xyz="0 0 -0.2" rpy="0 0 0"/><axis xyz="0 1 0"/><limit effort="30" velocity="10" lower="-3.0" upper="3.0"/></joint>
 
   <link name="BR_coxa">
-    <visual><geometry><cylinder length="0.05" radius="0.02"/></geometry>
-    <origin rpy="1.5708 0 0" xyz="0 -0.025 0"/><material name="red"><color rgba="0.8 0 0 1"/></material></visual>
+    <visual><geometry><cylinder length="0.05" radius="0.02"/></geometry><origin rpy="1.5708 0 0" xyz="0 -0.025 0"/><material name="red"><color rgba="0.8 0 0 1"/></material></visual>
+    <collision><geometry><cylinder length="0.05" radius="0.02"/></geometry><origin rpy="1.5708 0 0" xyz="0 -0.025 0"/></collision>
+    <inertial><mass value="0.2"/><inertia ixx="0.0001" ixy="0" ixz="0" iyy="0.0001" iyz="0" izz="0.0001"/></inertial>
   </link>
   <link name="BR_femur">
-    <visual><geometry><cylinder length="0.2" radius="0.02"/></geometry>
-    <origin rpy="0 0 0" xyz="0 0 -0.1"/></visual>
+    <visual><geometry><cylinder length="0.2" radius="0.02"/></geometry><origin rpy="0 0 0" xyz="0 0 -0.1"/></visual>
+    <collision><geometry><cylinder length="0.2" radius="0.02"/></geometry><origin rpy="0 0 0" xyz="0 0 -0.1"/></collision>
+    <inertial><mass value="0.2"/><inertia ixx="0.0001" ixy="0" ixz="0" iyy="0.0001" iyz="0" izz="0.0001"/></inertial>
   </link>
   <link name="BR_tibia">
-    <visual><geometry><cylinder length="0.2" radius="0.015"/></geometry>
-    <origin rpy="0 0 0" xyz="0 0 -0.1"/><material name="blue"><color rgba="0 0 0.8 1"/></material></visual>
+    <visual><geometry><sphere radius="0.02"/></geometry><origin rpy="0 0 0" xyz="0 0 -0.2"/><material name="blue"><color rgba="0 0 0.8 1"/></material></visual>
+    <visual><geometry><cylinder length="0.2" radius="0.015"/></geometry><origin rpy="0 0 0" xyz="0 0 -0.1"/><material name="blue"><color rgba="0 0 0.8 1"/></material></visual>
+    <collision><geometry><sphere radius="0.02"/></geometry><origin rpy="0 0 0" xyz="0 0 -0.2"/></collision>
+    <collision><geometry><cylinder length="0.2" radius="0.015"/></geometry><origin rpy="0 0 0" xyz="0 0 -0.1"/></collision>
+    <inertial><mass value="0.2"/><inertia ixx="0.0001" ixy="0" ixz="0" iyy="0.0001" iyz="0" izz="0.0001"/></inertial>
   </link>
 
-  <joint name="BR_shoulder_roll" type="revolute">
-    <parent link="base_link"/><child link="BR_coxa"/>
-    <origin xyz="-0.2 -0.1 0" rpy="0 0 0"/>
-    <axis xyz="1 0 0"/>
-    <limit effort="20" velocity="10" lower="-1.5" upper="1.5"/>
-  </joint>
-  <joint name="BR_shoulder_pitch" type="revolute">
-    <parent link="BR_coxa"/><child link="BR_femur"/>
-    <origin xyz="0 -0.05 0" rpy="0 0 0"/>
-    <axis xyz="0 1 0"/>
-    <limit effort="20" velocity="10" lower="-1.5" upper="1.5"/>
-  </joint>
-  <joint name="BR_knee_pitch" type="revolute">
-    <parent link="BR_femur"/><child link="BR_tibia"/>
-    <origin xyz="0 0 -0.2" rpy="0 0 0"/>
-    <axis xyz="0 1 0"/>
-    <limit effort="20" velocity="10" lower="-3.0" upper="3.0"/>
-  </joint>
+  <joint name="BR_shoulder_roll" type="revolute"><parent link="base_link"/><child link="BR_coxa"/><origin xyz="-0.2 -0.1 0" rpy="0 0 0"/><axis xyz="1 0 0"/><limit effort="30" velocity="10" lower="-1.5" upper="1.5"/></joint>
+  <joint name="BR_shoulder_pitch" type="revolute"><parent link="BR_coxa"/><child link="BR_femur"/><origin xyz="0 -0.05 0" rpy="0 0 0"/><axis xyz="0 1 0"/><limit effort="30" velocity="10" lower="-1.5" upper="1.5"/></joint>
+  <joint name="BR_knee_pitch" type="revolute"><parent link="BR_femur"/><child link="BR_tibia"/><origin xyz="0 0 -0.2" rpy="0 0 0"/><axis xyz="0 1 0"/><limit effort="30" velocity="10" lower="-3.0" upper="3.0"/></joint>
 </robot>
