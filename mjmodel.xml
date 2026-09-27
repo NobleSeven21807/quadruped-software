@@ -1,0 +1,5 @@
+<mujoco model="full_assembly">
+  <compiler angle="radian"/>
+
+  <worldbody/>
+</mujoco>
