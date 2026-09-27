@@ -9,7 +9,7 @@
         <visual>
             <origin xyz="9.8412e-19 0.0142875 8.67362e-19" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://full_assembly/meshes/_16T_GT2_Pulley_12_7mm_Wide.gltf" scale="1 1 1" />
+                <mesh filename="package://full_assembly/meshes/_16T_GT2_Pulley_12_7mm_Wide.stl" scale="1 1 1" />
             </geometry>
             <material name="0.294118_0.294118_0.294118_0.000000_0.000000">
                 <color rgba="0.294118 0.294118 0.294118 1" />
@@ -25,7 +25,7 @@
         <visual>
             <origin xyz="9.8412e-19 0.0142875 8.67362e-19" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://full_assembly/meshes/_16T_GT2_Pulley_12_7mm_Wide.gltf" scale="1 1 1" />
+                <mesh filename="package://full_assembly/meshes/_16T_GT2_Pulley_12_7mm_Wide.stl" scale="1 1 1" />
             </geometry>
             <material name="0.294118_0.294118_0.294118_0.000000_0.000000">
                 <color rgba="0.294118 0.294118 0.294118 1" />
@@ -41,7 +41,7 @@
         <visual>
             <origin xyz="9.8412e-19 0.0142875 8.67362e-19" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://full_assembly/meshes/_16T_GT2_Pulley_12_7mm_Wide.gltf" scale="1 1 1" />
+                <mesh filename="package://full_assembly/meshes/_16T_GT2_Pulley_12_7mm_Wide.stl" scale="1 1 1" />
             </geometry>
             <material name="0.294118_0.294118_0.294118_0.000000_0.000000">
                 <color rgba="0.294118 0.294118 0.294118 1" />
@@ -57,7 +57,7 @@
         <visual>
             <origin xyz="9.8412e-19 0.0142875 8.67362e-19" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://full_assembly/meshes/_16T_GT2_Pulley_12_7mm_Wide.gltf" scale="1 1 1" />
+                <mesh filename="package://full_assembly/meshes/_16T_GT2_Pulley_12_7mm_Wide.stl" scale="1 1 1" />
             </geometry>
             <material name="0.294118_0.294118_0.294118_0.000000_0.000000">
                 <color rgba="0.294118 0.294118 0.294118 1" />
@@ -73,7 +73,7 @@
         <visual>
             <origin xyz="9.8412e-19 0.0142875 8.67362e-19" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://full_assembly/meshes/_16T_GT2_Pulley_12_7mm_Wide.gltf" scale="1 1 1" />
+                <mesh filename="package://full_assembly/meshes/_16T_GT2_Pulley_12_7mm_Wide.stl" scale="1 1 1" />
             </geometry>
             <material name="0.294118_0.294118_0.294118_0.000000_0.000000">
                 <color rgba="0.294118 0.294118 0.294118 1" />
@@ -89,7 +89,7 @@
         <visual>
             <origin xyz="9.8412e-19 0.0142875 8.67362e-19" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://full_assembly/meshes/_16T_GT2_Pulley_12_7mm_Wide.gltf" scale="1 1 1" />
+                <mesh filename="package://full_assembly/meshes/_16T_GT2_Pulley_12_7mm_Wide.stl" scale="1 1 1" />
             </geometry>
             <material name="0.294118_0.294118_0.294118_0.000000_0.000000">
                 <color rgba="0.294118 0.294118 0.294118 1" />
@@ -105,7 +105,7 @@
         <visual>
             <origin xyz="9.8412e-19 0.0142875 8.67362e-19" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://full_assembly/meshes/_16T_GT2_Pulley_12_7mm_Wide.gltf" scale="1 1 1" />
+                <mesh filename="package://full_assembly/meshes/_16T_GT2_Pulley_12_7mm_Wide.stl" scale="1 1 1" />
             </geometry>
             <material name="0.294118_0.294118_0.294118_0.000000_0.000000">
                 <color rgba="0.294118 0.294118 0.294118 1" />
@@ -121,7 +121,7 @@
         <visual>
             <origin xyz="9.8412e-19 0.0142875 8.67362e-19" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://full_assembly/meshes/_16T_GT2_Pulley_12_7mm_Wide.gltf" scale="1 1 1" />
+                <mesh filename="package://full_assembly/meshes/_16T_GT2_Pulley_12_7mm_Wide.stl" scale="1 1 1" />
             </geometry>
             <material name="0.294118_0.294118_0.294118_0.000000_0.000000">
                 <color rgba="0.294118 0.294118 0.294118 1" />
@@ -137,7 +137,7 @@
         <visual>
             <origin xyz="9.8412e-19 0.0142875 8.67362e-19" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://full_assembly/meshes/_32T_GT2_Pulley_12_7mm_Wide.gltf" scale="1 1 1" />
+                <mesh filename="package://full_assembly/meshes/_32T_GT2_Pulley_12_7mm_Wide.stl" scale="1 1 1" />
             </geometry>
             <material name="0.294118_0.294118_0.294118_0.000000_0.000000">
                 <color rgba="0.294118 0.294118 0.294118 1" />
@@ -153,7 +153,7 @@
         <visual>
             <origin xyz="9.8412e-19 0.0142875 8.67362e-19" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://full_assembly/meshes/_32T_GT2_Pulley_12_7mm_Wide.gltf" scale="1 1 1" />
+                <mesh filename="package://full_assembly/meshes/_32T_GT2_Pulley_12_7mm_Wide.stl" scale="1 1 1" />
             </geometry>
             <material name="0.294118_0.294118_0.294118_0.000000_0.000000">
                 <color rgba="0.294118 0.294118 0.294118 1" />
@@ -169,7 +169,7 @@
         <visual>
             <origin xyz="9.8412e-19 0.0142875 8.67362e-19" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://full_assembly/meshes/_32T_GT2_Pulley_12_7mm_Wide.gltf" scale="1 1 1" />
+                <mesh filename="package://full_assembly/meshes/_32T_GT2_Pulley_12_7mm_Wide.stl" scale="1 1 1" />
             </geometry>
             <material name="0.294118_0.294118_0.294118_0.000000_0.000000">
                 <color rgba="0.294118 0.294118 0.294118 1" />
@@ -185,7 +185,7 @@
         <visual>
             <origin xyz="9.8412e-19 0.0142875 8.67362e-19" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://full_assembly/meshes/_32T_GT2_Pulley_12_7mm_Wide.gltf" scale="1 1 1" />
+                <mesh filename="package://full_assembly/meshes/_32T_GT2_Pulley_12_7mm_Wide.stl" scale="1 1 1" />
             </geometry>
             <material name="0.294118_0.294118_0.294118_0.000000_0.000000">
                 <color rgba="0.294118 0.294118 0.294118 1" />
@@ -201,7 +201,7 @@
         <visual>
             <origin xyz="9.8412e-19 -0.0015875 8.67362e-19" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://full_assembly/meshes/_32T_GT2_Pulley_12_7mm_Wide.gltf" scale="1 1 1" />
+                <mesh filename="package://full_assembly/meshes/_32T_GT2_Pulley_12_7mm_Wide.stl" scale="1 1 1" />
             </geometry>
             <material name="0.294118_0.294118_0.294118_0.000000_0.000000">
                 <color rgba="0.294118 0.294118 0.294118 1" />
@@ -217,7 +217,7 @@
         <visual>
             <origin xyz="9.8412e-19 0.0142875 8.67362e-19" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://full_assembly/meshes/_32T_GT2_Pulley_12_7mm_Wide.gltf" scale="1 1 1" />
+                <mesh filename="package://full_assembly/meshes/_32T_GT2_Pulley_12_7mm_Wide.stl" scale="1 1 1" />
             </geometry>
             <material name="0.294118_0.294118_0.294118_0.000000_0.000000">
                 <color rgba="0.294118 0.294118 0.294118 1" />
@@ -233,7 +233,7 @@
         <visual>
             <origin xyz="9.8412e-19 0.0142875 8.67362e-19" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://full_assembly/meshes/_32T_GT2_Pulley_12_7mm_Wide.gltf" scale="1 1 1" />
+                <mesh filename="package://full_assembly/meshes/_32T_GT2_Pulley_12_7mm_Wide.stl" scale="1 1 1" />
             </geometry>
             <material name="0.294118_0.294118_0.294118_0.000000_0.000000">
                 <color rgba="0.294118 0.294118 0.294118 1" />
@@ -249,7 +249,7 @@
         <visual>
             <origin xyz="9.8412e-19 0.0142875 8.67362e-19" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://full_assembly/meshes/_32T_GT2_Pulley_12_7mm_Wide.gltf" scale="1 1 1" />
+                <mesh filename="package://full_assembly/meshes/_32T_GT2_Pulley_12_7mm_Wide.stl" scale="1 1 1" />
             </geometry>
             <material name="0.294118_0.294118_0.294118_0.000000_0.000000">
                 <color rgba="0.294118 0.294118 0.294118 1" />
@@ -265,7 +265,7 @@
         <visual>
             <origin xyz="-0.005 -0.0306 -0.00475" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://full_assembly/meshes/DS3235SG_35KG.gltf" scale="1 1 1" />
+                <mesh filename="package://full_assembly/meshes/DS3235SG_35KG.stl" scale="1 1 1" />
             </geometry>
             <material name="0.792157_0.819608_0.933333_0.000000_0.000000">
                 <color rgba="0.792157 0.819608 0.933333 1" />
@@ -281,7 +281,7 @@
         <visual>
             <origin xyz="-0.005 -0.0306 0.04475" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://full_assembly/meshes/DS3235SG_35KG.gltf" scale="1 1 1" />
+                <mesh filename="package://full_assembly/meshes/DS3235SG_35KG.stl" scale="1 1 1" />
             </geometry>
             <material name="0.792157_0.819608_0.933333_0.000000_0.000000">
                 <color rgba="0.792157 0.819608 0.933333 1" />
@@ -297,7 +297,7 @@
         <visual>
             <origin xyz="0 -0.0424 0.02975" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://full_assembly/meshes/DS3235SG_35KG.gltf" scale="1 1 1" />
+                <mesh filename="package://full_assembly/meshes/DS3235SG_35KG.stl" scale="1 1 1" />
             </geometry>
             <material name="0.792157_0.819608_0.933333_0.000000_0.000000">
                 <color rgba="0.792157 0.819608 0.933333 1" />
@@ -313,7 +313,7 @@
         <visual>
             <origin xyz="0 -0.0424 0.02975" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://full_assembly/meshes/DS3235SG_35KG.gltf" scale="1 1 1" />
+                <mesh filename="package://full_assembly/meshes/DS3235SG_35KG.stl" scale="1 1 1" />
             </geometry>
             <material name="0.792157_0.819608_0.933333_0.000000_0.000000">
                 <color rgba="0.792157 0.819608 0.933333 1" />
@@ -329,7 +329,7 @@
         <visual>
             <origin xyz="0 -0.0424 0.02975" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://full_assembly/meshes/DS3235SG_35KG.gltf" scale="1 1 1" />
+                <mesh filename="package://full_assembly/meshes/DS3235SG_35KG.stl" scale="1 1 1" />
             </geometry>
             <material name="0.792157_0.819608_0.933333_0.000000_0.000000">
                 <color rgba="0.792157 0.819608 0.933333 1" />
@@ -345,7 +345,7 @@
         <visual>
             <origin xyz="0 -0.0424 0.02975" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://full_assembly/meshes/DS3235SG_35KG.gltf" scale="1 1 1" />
+                <mesh filename="package://full_assembly/meshes/DS3235SG_35KG.stl" scale="1 1 1" />
             </geometry>
             <material name="0.792157_0.819608_0.933333_0.000000_0.000000">
                 <color rgba="0.792157 0.819608 0.933333 1" />
@@ -361,7 +361,7 @@
         <visual>
             <origin xyz="0.005 -0.0306 -0.00475" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://full_assembly/meshes/DS3235SG_35KG.gltf" scale="1 1 1" />
+                <mesh filename="package://full_assembly/meshes/DS3235SG_35KG.stl" scale="1 1 1" />
             </geometry>
             <material name="0.792157_0.819608_0.933333_0.000000_0.000000">
                 <color rgba="0.792157 0.819608 0.933333 1" />
@@ -377,7 +377,7 @@
         <visual>
             <origin xyz="-0.005 -0.0307 0.04475" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://full_assembly/meshes/DS3235SG_35KG.gltf" scale="1 1 1" />
+                <mesh filename="package://full_assembly/meshes/DS3235SG_35KG.stl" scale="1 1 1" />
             </geometry>
             <material name="0.792157_0.819608_0.933333_0.000000_0.000000">
                 <color rgba="0.792157 0.819608 0.933333 1" />
@@ -393,7 +393,7 @@
         <visual>
             <origin xyz="-0.005 -0.0307 -0.00475" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://full_assembly/meshes/DS3235SG_35KG.gltf" scale="1 1 1" />
+                <mesh filename="package://full_assembly/meshes/DS3235SG_35KG.stl" scale="1 1 1" />
             </geometry>
             <material name="0.792157_0.819608_0.933333_0.000000_0.000000">
                 <color rgba="0.792157 0.819608 0.933333 1" />
@@ -409,7 +409,7 @@
         <visual>
             <origin xyz="-0.005 -0.0306 0.04475" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://full_assembly/meshes/DS3235SG_35KG.gltf" scale="1 1 1" />
+                <mesh filename="package://full_assembly/meshes/DS3235SG_35KG.stl" scale="1 1 1" />
             </geometry>
             <material name="0.792157_0.819608_0.933333_0.000000_0.000000">
                 <color rgba="0.792157 0.819608 0.933333 1" />
@@ -425,7 +425,7 @@
         <visual>
             <origin xyz="0 -0.0424 0.02975" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://full_assembly/meshes/DS3235SG_35KG.gltf" scale="1 1 1" />
+                <mesh filename="package://full_assembly/meshes/DS3235SG_35KG.stl" scale="1 1 1" />
             </geometry>
             <material name="0.792157_0.819608_0.933333_0.000000_0.000000">
                 <color rgba="0.792157 0.819608 0.933333 1" />
@@ -441,7 +441,7 @@
         <visual>
             <origin xyz="0 -0.0424 0.02975" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://full_assembly/meshes/DS3235SG_35KG.gltf" scale="1 1 1" />
+                <mesh filename="package://full_assembly/meshes/DS3235SG_35KG.stl" scale="1 1 1" />
             </geometry>
             <material name="0.792157_0.819608_0.933333_0.000000_0.000000">
                 <color rgba="0.792157 0.819608 0.933333 1" />
@@ -576,7 +576,7 @@
         <visual>
             <origin xyz="-0.0256708 0.05715 -0.0373625" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://full_assembly/meshes/Part_1.gltf" scale="1 1 1" />
+                <mesh filename="package://full_assembly/meshes/Part_1.stl" scale="1 1 1" />
             </geometry>
             <material name="0.615686_0.811765_0.929412_0.000000_0.000000">
                 <color rgba="0.615686 0.811765 0.929412 1" />
@@ -592,7 +592,7 @@
         <visual>
             <origin xyz="0 0 0" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://full_assembly/meshes/Part_1_1.gltf" scale="1 1 1" />
+                <mesh filename="package://full_assembly/meshes/Part_1_1.stl" scale="1 1 1" />
             </geometry>
             <material name="0.647059_0.647059_0.647059_0.000000_0.000000">
                 <color rgba="0.647059 0.647059 0.647059 1" />
@@ -608,7 +608,7 @@
         <visual>
             <origin xyz="0 0 0" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://full_assembly/meshes/Part_1_3.gltf" scale="1 1 1" />
+                <mesh filename="package://full_assembly/meshes/Part_1_3.stl" scale="1 1 1" />
             </geometry>
             <material name="0.615686_0.811765_0.929412_0.000000_0.000000">
                 <color rgba="0.615686 0.811765 0.929412 1" />
@@ -624,7 +624,7 @@
         <visual>
             <origin xyz="0.0149314 0.00635 -0.0218991" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://full_assembly/meshes/Part_1_2.gltf" scale="1 1 1" />
+                <mesh filename="package://full_assembly/meshes/Part_1_2.stl" scale="1 1 1" />
             </geometry>
             <material name="0.615686_0.811765_0.929412_0.000000_0.000000">
                 <color rgba="0.615686 0.811765 0.929412 1" />
@@ -640,7 +640,7 @@
         <visual>
             <origin xyz="0 0 0" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://full_assembly/meshes/Part_1_1.gltf" scale="1 1 1" />
+                <mesh filename="package://full_assembly/meshes/Part_1_1.stl" scale="1 1 1" />
             </geometry>
             <material name="0.647059_0.647059_0.647059_0.000000_0.000000">
                 <color rgba="0.647059 0.647059 0.647059 1" />
@@ -656,7 +656,7 @@
         <visual>
             <origin xyz="-0.0186436 -0.03175 0.0756509" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://full_assembly/meshes/Part_1_2.gltf" scale="1 1 1" />
+                <mesh filename="package://full_assembly/meshes/Part_1_2.stl" scale="1 1 1" />
             </geometry>
             <material name="0.615686_0.811765_0.929412_0.000000_0.000000">
                 <color rgba="0.615686 0.811765 0.929412 1" />
@@ -672,7 +672,7 @@
         <visual>
             <origin xyz="-0.00635 0.00174531 -0.0456464" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://full_assembly/meshes/Part_1_3.gltf" scale="1 1 1" />
+                <mesh filename="package://full_assembly/meshes/Part_1_3.stl" scale="1 1 1" />
             </geometry>
             <material name="0.615686_0.811765_0.929412_0.000000_0.000000">
                 <color rgba="0.615686 0.811765 0.929412 1" />
@@ -688,7 +688,7 @@
         <visual>
             <origin xyz="0.0385064 -0.03175 0.0756509" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://full_assembly/meshes/Part_1_2.gltf" scale="1 1 1" />
+                <mesh filename="package://full_assembly/meshes/Part_1_2.stl" scale="1 1 1" />
             </geometry>
             <material name="0.615686_0.811765_0.929412_0.000000_0.000000">
                 <color rgba="0.615686 0.811765 0.929412 1" />
@@ -704,7 +704,7 @@
         <visual>
             <origin xyz="0 0 0" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://full_assembly/meshes/Part_1_3.gltf" scale="1 1 1" />
+                <mesh filename="package://full_assembly/meshes/Part_1_3.stl" scale="1 1 1" />
             </geometry>
             <material name="0.615686_0.811765_0.929412_0.000000_0.000000">
                 <color rgba="0.615686 0.811765 0.929412 1" />
@@ -720,7 +720,7 @@
         <visual>
             <origin xyz="0 0 0" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://full_assembly/meshes/Part_1_1.gltf" scale="1 1 1" />
+                <mesh filename="package://full_assembly/meshes/Part_1_1.stl" scale="1 1 1" />
             </geometry>
             <material name="0.647059_0.647059_0.647059_0.000000_0.000000">
                 <color rgba="0.647059 0.647059 0.647059 1" />
@@ -736,7 +736,7 @@
         <visual>
             <origin xyz="0 0 0" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://full_assembly/meshes/Part_1_1.gltf" scale="1 1 1" />
+                <mesh filename="package://full_assembly/meshes/Part_1_1.stl" scale="1 1 1" />
             </geometry>
             <material name="0.647059_0.647059_0.647059_0.000000_0.000000">
                 <color rgba="0.647059 0.647059 0.647059 1" />
@@ -752,7 +752,7 @@
         <visual>
             <origin xyz="-0.0186436 -0.03175 0.0756509" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://full_assembly/meshes/Part_1_2.gltf" scale="1 1 1" />
+                <mesh filename="package://full_assembly/meshes/Part_1_2.stl" scale="1 1 1" />
             </geometry>
             <material name="0.615686_0.811765_0.929412_0.000000_0.000000">
                 <color rgba="0.615686 0.811765 0.929412 1" />
@@ -768,7 +768,7 @@
         <visual>
             <origin xyz="0 0 0" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://full_assembly/meshes/Part_1_3.gltf" scale="1 1 1" />
+                <mesh filename="package://full_assembly/meshes/Part_1_3.stl" scale="1 1 1" />
             </geometry>
             <material name="0.615686_0.811765_0.929412_0.000000_0.000000">
                 <color rgba="0.615686 0.811765 0.929412 1" />
@@ -784,7 +784,7 @@
         <visual>
             <origin xyz="-0.04445 0.00174531 -0.0456464" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://full_assembly/meshes/Part_2.gltf" scale="1 1 1" />
+                <mesh filename="package://full_assembly/meshes/Part_2.stl" scale="1 1 1" />
             </geometry>
             <material name="0.647059_0.647059_0.647059_0.000000_0.000000">
                 <color rgba="0.647059 0.647059 0.647059 1" />
@@ -800,7 +800,7 @@
         <visual>
             <origin xyz="0 0 0" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://full_assembly/meshes/Part_2_1.gltf" scale="1 1 1" />
+                <mesh filename="package://full_assembly/meshes/Part_2_1.stl" scale="1 1 1" />
             </geometry>
             <material name="0.615686_0.811765_0.929412_0.000000_0.000000">
                 <color rgba="0.615686 0.811765 0.929412 1" />
@@ -816,7 +816,7 @@
         <visual>
             <origin xyz="-0.04445 0.00174531 -0.0456464" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://full_assembly/meshes/Part_2.gltf" scale="1 1 1" />
+                <mesh filename="package://full_assembly/meshes/Part_2.stl" scale="1 1 1" />
             </geometry>
             <material name="0.647059_0.647059_0.647059_0.000000_0.000000">
                 <color rgba="0.647059 0.647059 0.647059 1" />
@@ -832,7 +832,7 @@
         <visual>
             <origin xyz="0.0254 0.00174531 -0.0456464" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://full_assembly/meshes/Part_2_1.gltf" scale="1 1 1" />
+                <mesh filename="package://full_assembly/meshes/Part_2_1.stl" scale="1 1 1" />
             </geometry>
             <material name="0.615686_0.811765_0.929412_0.000000_0.000000">
                 <color rgba="0.615686 0.811765 0.929412 1" />
@@ -848,7 +848,7 @@
         <visual>
             <origin xyz="-0.04445 0.00174531 -0.0456464" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://full_assembly/meshes/Part_2.gltf" scale="1 1 1" />
+                <mesh filename="package://full_assembly/meshes/Part_2.stl" scale="1 1 1" />
             </geometry>
             <material name="0.647059_0.647059_0.647059_0.000000_0.000000">
                 <color rgba="0.647059 0.647059 0.647059 1" />
@@ -864,7 +864,7 @@
         <visual>
             <origin xyz="0.0254 0.00174531 -0.0456464" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://full_assembly/meshes/Part_2_1.gltf" scale="1 1 1" />
+                <mesh filename="package://full_assembly/meshes/Part_2_1.stl" scale="1 1 1" />
             </geometry>
             <material name="0.615686_0.811765_0.929412_0.000000_0.000000">
                 <color rgba="0.615686 0.811765 0.929412 1" />
@@ -880,7 +880,7 @@
         <visual>
             <origin xyz="-0.0381 0.00174531 0.0623036" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://full_assembly/meshes/Part_2.gltf" scale="1 1 1" />
+                <mesh filename="package://full_assembly/meshes/Part_2.stl" scale="1 1 1" />
             </geometry>
             <material name="0.647059_0.647059_0.647059_0.000000_0.000000">
                 <color rgba="0.647059 0.647059 0.647059 1" />
@@ -896,7 +896,7 @@
         <visual>
             <origin xyz="0 0 0" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://full_assembly/meshes/Part_2_1.gltf" scale="1 1 1" />
+                <mesh filename="package://full_assembly/meshes/Part_2_1.stl" scale="1 1 1" />
             </geometry>
             <material name="0.615686_0.811765_0.929412_0.000000_0.000000">
                 <color rgba="0.615686 0.811765 0.929412 1" />
@@ -907,7 +907,7 @@
         <visual>
             <origin xyz="0.442513 -0.338788 -0.172754" rpy="2.77556e-17 -2.77556e-17 1.5708" />
             <geometry>
-                <mesh filename="package://full_assembly/meshes/_32T_GT2_Pulley_12_7mm_Wide.gltf" scale="1 1 1" />
+                <mesh filename="package://full_assembly/meshes/_32T_GT2_Pulley_12_7mm_Wide.stl" scale="1 1 1" />
             </geometry>
             <material name="0.294118_0.294118_0.294118_0.000000_0.000000">
                 <color rgba="0.294118 0.294118 0.294118 1" />
@@ -916,7 +916,7 @@
         <visual>
             <origin xyz="0.442513 -0.143738 -0.172754" rpy="2.77556e-17 -2.77556e-17 1.5708" />
             <geometry>
-                <mesh filename="package://full_assembly/meshes/_32T_GT2_Pulley_12_7mm_Wide.gltf" scale="1 1 1" />
+                <mesh filename="package://full_assembly/meshes/_32T_GT2_Pulley_12_7mm_Wide.stl" scale="1 1 1" />
             </geometry>
             <material name="0.294118_0.294118_0.294118_0.000000_0.000000">
                 <texture />
@@ -926,7 +926,7 @@
         <visual>
             <origin xyz="0.583904 -0.150188 -0.172754" rpy="2.77556e-17 6.83399e-16 -1.5708" />
             <geometry>
-                <mesh filename="package://full_assembly/meshes/_32T_GT2_Pulley_12_7mm_Wide.gltf" scale="1 1 1" />
+                <mesh filename="package://full_assembly/meshes/_32T_GT2_Pulley_12_7mm_Wide.stl" scale="1 1 1" />
             </geometry>
             <material name="0.294118_0.294118_0.294118_0.000000_0.000000">
                 <texture />
@@ -936,7 +936,7 @@
         <visual>
             <origin xyz="0.583904 -0.345138 -0.172754" rpy="2.77556e-17 2.77556e-17 -1.5708" />
             <geometry>
-                <mesh filename="package://full_assembly/meshes/_32T_GT2_Pulley_12_7mm_Wide.gltf" scale="1 1 1" />
+                <mesh filename="package://full_assembly/meshes/_32T_GT2_Pulley_12_7mm_Wide.stl" scale="1 1 1" />
             </geometry>
             <material name="0.294118_0.294118_0.294118_0.000000_0.000000">
                 <texture />
