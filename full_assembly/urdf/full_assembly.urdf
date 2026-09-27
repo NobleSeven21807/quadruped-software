@@ -950,21 +950,24 @@
         <parent link="part_1" />
         <child link="ds3235sg_35kg_4" />
     </joint>
-    <joint name="fastened_10" type="fixed">
+    <joint name="fastened_10" type="revolute">
         <origin xyz="-0.005 0.0118 0.015" rpy="0.523599 1.11022e-16 -1.5708" />
-        <axis xyz="1 0 0" />
+        <axis xyz="-1 0 0" />
+        <limit lower="-1.5708" upper="1.5708" effort="3.43" velocity="9.5" />
         <parent link="ds3235sg_35kg_1" />
         <child link="part_2" />
     </joint>
-    <joint name="fastened_11" type="fixed">
+    <joint name="fastened_11" type="revolute">
         <origin xyz="-0.005 0.0118 0.015" rpy="-0.523599 -1.22125e-15 -1.5708" />
         <axis xyz="1 0 0" />
+        <limit lower="-1.5708" upper="1.5708" effort="3.43" velocity="9.5" />
         <parent link="ds3235sg_35kg_7" />
         <child link="part_2_4" />
     </joint>
-    <joint name="fastened_12" type="fixed">
+    <joint name="fastened_12" type="revolute">
         <origin xyz="-0.005 0.0117 0.015" rpy="0.523599 -2.77556e-17 -1.5708" />
-        <axis xyz="1 0 0" />
+        <axis xyz="-1 0 0" />
+        <limit lower="-1.5708" upper="1.5708" effort="3.43" velocity="9.5" />
         <parent link="ds3235sg_35kg_5" />
         <child link="part_2_2" />
     </joint>
@@ -1010,15 +1013,17 @@
         <parent link="part_1_5" />
         <child link="32t_gt2_pulley_12_7mm_wide_4" />
     </joint>
-    <joint name="fastened_16" type="fixed">
+    <joint name="fastened_16" type="revolute">
         <origin xyz="0.005 0.0118 -0.0345" rpy="1.5708 -1.66533e-16 1.5708" />
-        <axis xyz="-1 0 -3.27822e-16" />
+        <axis xyz="1 0 0" />
+        <limit lower="-1.5708" upper="1.5708" effort="3.43" velocity="9.5" />
         <parent link="ds3235sg_35kg_4" />
         <child link="part_1_4" />
     </joint>
-    <joint name="fastened_16_1" type="fixed">
+    <joint name="fastened_16_1" type="revolute">
         <origin xyz="-0.023575 0.0381 -0.09755" rpy="0 -1.5708 4.71239" />
-        <axis xyz="-0 1 -0" />
+        <axis xyz="0 1 0" />
+        <limit lower="-1.5708" upper="1.5708" effort="3.43" velocity="9.5" />
         <parent link="part_1_11" />
         <child link="ds3235sg_35kg_11" />
     </joint>
@@ -1094,27 +1099,31 @@
         <parent link="part_1_1" />
         <child link="32t_gt2_pulley_12_7mm_wide_1" />
     </joint>
-    <joint name="fastened_5" type="fixed">
+    <joint name="fastened_5" type="revolute">
         <origin xyz="0.00635 -0.00174531 -0.0623036" rpy="0.785398 -7.19522e-24 -3.14159" />
         <axis xyz="1 0 0" />
+        <limit lower="-1.5708" upper="1.5708" effort="3.43" velocity="9.5" />
         <parent link="part_1_1" />
         <child link="part_1_3" />
     </joint>
-    <joint name="fastened_6" type="fixed">
+    <joint name="fastened_6" type="revolute">
         <origin xyz="-0.00635 4.16334e-17 -0.10795" rpy="0.785398 1.51321e-16 -3.14159" />
-        <axis xyz="-1 0 0" />
+        <axis xyz="1 0 0" />
+        <limit lower="-1.5708" upper="1.5708" effort="3.43" velocity="9.5" />
         <parent link="part_2_2" />
         <child link="part_2_3" />
     </joint>
-    <joint name="fastened_6_1" type="fixed">
+    <joint name="fastened_6_1" type="revolute">
         <origin xyz="-0.005 0.0117 -0.0345" rpy="1.5708 1.44329e-15 -1.5708" />
-        <axis xyz="1 -0 9.10616e-17" />
+        <axis xyz="1 0 0" />
+        <limit lower="-1.5708" upper="1.5708" effort="3.43" velocity="9.5" />
         <parent link="ds3235sg_35kg_6" />
         <child link="part_1_8" />
     </joint>
-    <joint name="fastened_6_2" type="fixed">
+    <joint name="fastened_6_2" type="revolute">
         <origin xyz="-0.005 0.0118 -0.0345" rpy="1.5708 -3.33067e-16 -1.5708" />
-        <axis xyz="1 -0 9.10616e-17" />
+        <axis xyz="1 0 0" />
+        <limit lower="-1.5708" upper="1.5708" effort="3.43" velocity="9.5" />
         <parent link="ds3235sg_35kg" />
         <child link="part_1_2" />
     </joint>
@@ -1124,9 +1133,10 @@
         <parent link="part_1_4" />
         <child link="ds3235sg_35kg_3" />
     </joint>
-    <joint name="fastened_7_1" type="fixed">
+    <joint name="fastened_7_1" type="revolute">
         <origin xyz="-0.0254 -0.00174531 0.0456464" rpy="-0.785398 1.98608e-16 3.14159" />
-        <axis xyz="-1 -0 -0" />
+        <axis xyz="1 0 0" />
+        <limit lower="-1.5708" upper="1.5708" effort="3.43" velocity="9.5" />
         <parent link="part_2_7" />
         <child link="part_2_6" />
     </joint>
@@ -1148,9 +1158,10 @@
         <parent link="part_1_8" />
         <child link="ds3235sg_35kg_8" />
     </joint>
-    <joint name="fastened_8_2" type="fixed">
+    <joint name="fastened_8_2" type="revolute">
         <origin xyz="-0.00635 2.77556e-17 -0.10795" rpy="-0.785398 3.98273e-17 3.14159" />
-        <axis xyz="-1 -0 -0" />
+        <axis xyz="-1 0 0" />
+        <limit lower="-1.5708" upper="1.5708" effort="3.43" velocity="9.5" />
         <parent link="part_2_4" />
         <child link="part_2_5" />
     </joint>
@@ -1172,9 +1183,10 @@
         <parent link="part_1_8" />
         <child link="ds3235sg_35kg_7" />
     </joint>
-    <joint name="fastened_9_1" type="fixed">
+    <joint name="fastened_9_1" type="revolute">
         <origin xyz="0.00635 0 0.10795" rpy="-1.92296e-16 -0.523599 1.5708" />
-        <axis xyz="-0 1 -0" />
+        <axis xyz="0 -1 0" />
+        <limit lower="-1.5708" upper="1.5708" effort="3.43" velocity="9.5" />
         <parent link="part_2_6" />
         <child link="ds3235sg_35kg_9" />
     </joint>
