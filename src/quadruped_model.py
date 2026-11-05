@@ -41,7 +41,6 @@ JOINT_RANGE_DEG = {
 SERVO_KP = 20.0  # N*m/rad
 SERVO_KV = 0.3  # N*m*s/rad
 SERVO_MAX_TORQUE = 3.43  # N*m (35 kg*cm)
-SERVO_RESPONSE_TIME = 0.15  # s; targets are low-pass filtered so slider jumps don't snap the legs
 
 # Onshape exported near-zero masses, so inertia is recomputed from the meshes.
 SERVO_MASS = 0.063  # kg
@@ -128,7 +127,7 @@ def configure_servo_joints(spec):
             forcerange=[-SERVO_MAX_TORQUE, SERVO_MAX_TORQUE],
             forcelimited=mujoco.mjtLimited.mjLIMITED_TRUE,
         )
-        actuator.set_to_position(kp=SERVO_KP, kv=SERVO_KV, timeconst=SERVO_RESPONSE_TIME)
+        actuator.set_to_position(kp=SERVO_KP, kv=SERVO_KV)
 
 
 def lowest_point(model, data):
