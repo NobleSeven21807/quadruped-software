@@ -1,68 +1,36 @@
-from enum import Enum
-from pathlib import Path
-import sys
-
-_policies_dir = Path(__file__).resolve().parent / "Control-Policies"
-if str(_policies_dir) not in sys.path:
-    sys.path.insert(0, str(_policies_dir))
-
-import Classical
-
-
-class MoveCommand:
-    class Direction(Enum):
-        FORWARDS = "forwards"
-        BACKWARDS = "backwards"
-        ROTATE_LEFT = "rotate_left"
-        ROTATE_RIGHT = "rotate_right"
-
-    def __init__(self, direction=None):
-        self.direction = direction
-
-
-class Leg:
-    class Direction(Enum):
-        FORWARDS = "forwards"
-        BACKWARDS = "backwards"
-
-    def __init__(self, direction=None):
-        self.direction = direction
-
-    def move_leg(self, direction):
-        self.direction = direction
-        if direction == Leg.Direction.FORWARDS:
-            Classical.move_leg_forward()
-        elif direction == Leg.Direction.BACKWARDS:
-            Classical.move_leg_backwards()
+from control_policies.classical_policy import ClassicalPolicy
+from control_policies.gait import VelocityCommand
+from control_policies.kinematics import ACTUATOR_ORDER
 
 
 class QuadrupedRobot:
-    def __init__(self):
-        self.front_left = Leg()
-        self.front_right = Leg()
-        self.back_left = Leg()
-        self.back_right = Leg()
-        self.command = None
+    """Joins a control policy to a backend, so the same code drives sim or hardware.
 
-    def move(self, command):
+    backend: any backends.backend.RobotBackend (MuJoCo now, servos on the Pi later).
+    """
+
+    def __init__(self, backend, policy=None):
+        self.backend = backend
+        self.policy = policy or ClassicalPolicy()
+        self.command = VelocityCommand()
+
+    def stand(self):
+        self.command = VelocityCommand()
+        self.backend.reset(self.policy.reset())
+
+    def move(self, command, dt):
+        """Follow command (gait.VelocityCommand) for dt seconds."""
         self.command = command
-        if command.direction == MoveCommand.Direction.FORWARDS:
-            self._set_all_legs(Leg.Direction.FORWARDS)
-        elif command.direction == MoveCommand.Direction.BACKWARDS:
-            self._set_all_legs(Leg.Direction.BACKWARDS)
-        elif command.direction == MoveCommand.Direction.ROTATE_RIGHT:
-            self.front_left.move_leg(Leg.Direction.FORWARDS)
-            self.back_left.move_leg(Leg.Direction.FORWARDS)
-            self.front_right.move_leg(Leg.Direction.BACKWARDS)
-            self.back_right.move_leg(Leg.Direction.BACKWARDS)
-        elif command.direction == MoveCommand.Direction.ROTATE_LEFT:
-            self.front_left.move_leg(Leg.Direction.BACKWARDS)
-            self.back_left.move_leg(Leg.Direction.BACKWARDS)
-            self.front_right.move_leg(Leg.Direction.FORWARDS)
-            self.back_right.move_leg(Leg.Direction.FORWARDS)
+        self.backend.send_joint_targets(self.policy.step(command, dt))
+        self.backend.advance(dt)
 
-    def _set_all_legs(self, direction):
-        self.front_left.move_leg(direction)
-        self.front_right.move_leg(direction)
-        self.back_left.move_leg(direction)
-        self.back_right.move_leg(direction)
+    @property
+    def problem_legs(self):
+        """Legs whose last target was out of reach or clamped to a joint limit."""
+        return self.policy.problem_legs
+
+    def is_running(self):
+        return self.backend.is_running()
+
+    def close(self):
+        self.backend.close()
